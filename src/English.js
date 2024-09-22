@@ -7,22 +7,22 @@ import { IoLogoInstagram } from 'react-icons/io5';
 import { FaPhoneAlt,FaYoutube } from 'react-icons/fa';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; 
-import backgroundImage from './images/9.jpg';
-
+import backgroundImage from './images/13.jpg';
 const testimonials = [
   {
-    quote: "They were extremely accommodating and allowed us to check in early at like 10am. We got to the hotel super early and I didn’t wanna wait. So this was a big plus. The service was exceptional as well. Would definitely send a friend here.",
-    author: "Dennis Monterey, Customer"
+    quote: "The rest house is very beautiful, and thank you for the organization, care, and attention to the place. The family enjoyed it and had a great time. We will book again, God willing, and the prices are reasonable compared to other rest houses.",
+    author: "Customer"
   },
   {
-    quote: "Amazing experience! The rooms were clean, and the staff was super friendly. The view from our room was spectacular, and we had everything we needed for a perfect vacation.",
-    author: "Jessica Smith, Guest"
+    quote: "May God reward you. The rest house is very beautiful, with well-arranged seating for adults and a large playground. The grassy area is lovely, especially for breakfast. It had a pleasant atmosphere suitable for gatherings of a large number. The swimming pool is nice for both men and women. The price compared to the market is very good, and God willing, we will book with you for future gatherings.",
+    author: "Customer"
   },
   {
-    quote: "One of the best stays I've had in a long time. The amenities were top-notch, and the atmosphere was so relaxing. Can't wait to come back!",
-    author: "Michael Johnson, Traveler"
+    quote: "The farm, mashallah, is very beautiful and worth booking. The facilities are well-organized and nice, and God willing, I will book for parties and events.",
+    author: "Customer"
   }
 ];
+
 const App = () => {
   
   const sliderRef = useRef(null);
@@ -101,7 +101,7 @@ const App = () => {
       <Link to="about" smooth={true} className="cursor-pointer hover:text-greener">About Us</Link>
       <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener">Discover Rooms</Link>
       <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener">Comments</Link>
-      <a href="/arabic" className="cursor-pointer hover:text-greener">Arabic</a>
+      <Link to="/" className="cursor-pointer hover:text-greener">Arabic</Link>
     </div>
     
     {/* Mobile Menu Button */}
@@ -311,7 +311,7 @@ const App = () => {
           “{testimonials[currentIndex].quote}”
         </p>
         <span className="text-white font-semibold mt-6 block">
-          - {testimonials[currentIndex].author}
+           {testimonials[currentIndex].author}
         </span>
       </div>
 
