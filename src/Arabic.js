@@ -99,7 +99,7 @@ const App = () => {
       <Link to="about" smooth={true} className="cursor-pointer hover:text-greener">عنّا</Link>
       <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener">اكتشف الغرف</Link>
       <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener">التعليقات</Link>
-      <Link to="/english" className="cursor-pointer hover:text-greener">الانجلزية</Link>
+      <Link to="/" className="cursor-pointer hover:text-greener">الانجلزية</Link>
     </div>
     
     {/* Mobile Menu Button */}
@@ -116,7 +116,7 @@ const App = () => {
       <Link to="about" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>عنّا</Link>
       <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>اكتشف الغرف</Link>
       <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>التعليقات</Link>
-      <a href="/arabic" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>العربية</a>
+      <Link to="/" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>العربية</Link>
     </div>
   )}
 </nav>
@@ -337,7 +337,11 @@ const App = () => {
 
   <div className="container mx-auto px-6 relative z-10">
     {/* عنوان الفوتر */}
-    <h2 className="text-center text-4xl font-bold mb-6">دار البستان</h2>
+    <h2 className="text-center text-4xl font-bold mb-2">  <img 
+    src="logo1.png" 
+    alt="دار البستان" 
+    className="w-16 h-auto mx-auto" 
+  /></h2>
 
     {/* أيقونات التواصل الاجتماعي والمعلومات */}
     <div className="flex justify-center space-x-4 mb-6">

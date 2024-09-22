@@ -118,7 +118,7 @@ const App = () => {
       <Link to="about" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>About Us</Link>
       <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Discover Rooms</Link>
       <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Comments</Link>
-      <a href="/arabic" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Arabic</a>
+      <Link to="/" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Arabic</Link>
     </div>
   )}
 </nav>
