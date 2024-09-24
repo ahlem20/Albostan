@@ -9,10 +9,7 @@ module.exports = {
         'brown': '#2A260C', // Custom color
         'greener': '#2E6846', 
       },
-      fontFamily: {
-        'sans': ['Poppins', 'sans-serif'], // Adding custom font (e.g., 'Poppins')
-        'serif': ['Merriweather', 'serif'], // Optionally add another font for serif text
-      },
+   
     },
   },
   plugins: [],
