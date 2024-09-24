@@ -139,7 +139,7 @@ const App = () => {
         {/* Content */}
         <div className="relative z-10 text-center">
           <motion.h1
-            className="lg:text-6xl text-3xl font-bold text-white lg:mb-6 mb-8"
+            className="lg:text-6xl text-3xl font-bold text-white mx-4 lg:mx-auto lg:mb-6 mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
@@ -148,7 +148,7 @@ const App = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg text-gray-200 lg:mb-10 mb-14 max-w-md mx-auto"
+            className="text-lg text-gray-200 lg:mb-10 mb-14 max-w-md mx-4 lg:mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
