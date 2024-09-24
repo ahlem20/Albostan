@@ -198,7 +198,7 @@ const App = () => {
       <h1 className="text-2xl lg:text-4xl font-bold mb-6 text-center lg:text-right">
         <span className="text-greener">استراحة بستان دار</span>
       </h1>
-      <p className="text-gray-600 leading-relaxed mb-8 text-center lg:text-right">
+      <p className="text-gray-600 leading-relaxed mb-8 text-center lg:text-right text-xl">
         مرحبًا بكم في استراحة بستان دار – الوجهة المثالية للعائلات والتجمعات الكبيرة.<br/>
 
         مساحات إقامة واسعة ومسطحات خضراء طبيعية.<br/>
