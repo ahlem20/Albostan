@@ -97,10 +97,10 @@ const App = () => {
     <h1 className="lg:text-3xl text-2xl font-bold text-greener">دار البستان</h1>
      {/* Desktop Menu */}
     <div className="hidden md:flex space-x-6">
-    <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">عنّا</button>
-    <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
-    <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
     <button onClick={() => navigate('/english')} className="cursor-pointer hover:text-greener">الانجلزية</button>
+    <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
+    <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
+    <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">من نحن</button>
     </div>
     
     {/* Mobile Menu Button */}
@@ -114,11 +114,10 @@ const App = () => {
   {/* Mobile Menu */}
   {isMenuOpen && (
     <div className="md:hidden flex flex-col bg-white px-6 py-4 space-y-4">
-      <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">عنّا</button>
-      <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
-      <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
-      <button onClick={() => navigate('/english')} className="cursor-pointer hover:text-greener">الانجلزية</button>
-         
+    <button onClick={() => navigate('/english')} className="cursor-pointer hover:text-greener">الانجلزية</button>
+    <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
+    <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
+    <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">من نحن</button>
     </div>
   )}
 </nav>
