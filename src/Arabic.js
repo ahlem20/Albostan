@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { FaQuoteLeft } from 'react-icons/fa';
 import { MdOutlineHorizontalRule } from "react-icons/md";
 import { IoLogoInstagram } from 'react-icons/io5';
+import { useNavigate } from 'react-router-dom'; 
 import { FaPhoneAlt, FaYoutube } from 'react-icons/fa';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; 
@@ -26,6 +27,7 @@ const testimonials = [
 
 const App = () => {
   
+  const navigate = useNavigate(); // useNavigate hoo
   const sliderRef = useRef(null);
   const sliderRefR = useRef(null);
 
@@ -93,13 +95,12 @@ const App = () => {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm">
   <div className="container mx-auto px-6 py-4 flex justify-between items-center">
     <h1 className="lg:text-3xl text-2xl font-bold text-greener">دار البستان</h1>
-    
-    {/* Desktop Menu */}
+     {/* Desktop Menu */}
     <div className="hidden md:flex space-x-6">
-      <Link to="about" smooth={true} className="cursor-pointer hover:text-greener">عنّا</Link>
-      <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener">اكتشف الغرف</Link>
-      <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener">التعليقات</Link>
-      <Link to="/" className="cursor-pointer hover:text-greener">الانجلزية</Link>
+    <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">عنّا</button>
+    <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
+    <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
+    <button onClick={() => navigate('/english')} className="cursor-pointer hover:text-greener">الانجلزية</button>
     </div>
     
     {/* Mobile Menu Button */}
@@ -113,10 +114,11 @@ const App = () => {
   {/* Mobile Menu */}
   {isMenuOpen && (
     <div className="md:hidden flex flex-col bg-white px-6 py-4 space-y-4">
-      <Link to="about" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>عنّا</Link>
-      <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>اكتشف الغرف</Link>
-      <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>التعليقات</Link>
-      <Link to="/" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>العربية</Link>
+      <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">عنّا</button>
+      <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">اكتشف الغرف</button>
+      <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">التعليقات</button>
+      <button onClick={() => navigate('/english')} className="cursor-pointer hover:text-greener">الانجلزية</button>
+         
     </div>
   )}
 </nav>

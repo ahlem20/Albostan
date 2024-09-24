@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { FaQuoteLeft } from 'react-icons/fa';
 import { MdOutlineHorizontalRule } from "react-icons/md";
 import { IoLogoInstagram } from 'react-icons/io5';
@@ -90,38 +91,39 @@ const App = () => {
     setIsMenuOpen(!isMenuOpen);  // Toggle mobile menu state
   };
 
+  const navigate = useNavigate(); // useNavigate hook
   return (
     <div className="font-sans">
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm">
-  <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 className="lg:text-3xl text-2xl font-bold text-greener">Dar Albostan</h1>
-    
-    {/* Desktop Menu */}
-    <div className="hidden md:flex space-x-6">
-      <Link to="about" smooth={true} className="cursor-pointer hover:text-greener">About Us</Link>
-      <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener">Discover Rooms</Link>
-      <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener">Comments</Link>
-      <Link to="/" className="cursor-pointer hover:text-greener">Arabic</Link>
-    </div>
-    
-    {/* Mobile Menu Button */}
-    <div className="md:hidden">
-      <button onClick={toggleMenu} className="focus:outline-none">
-        {isMenuOpen ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
-      </button>
-    </div>
-  </div>
-  
-  {/* Mobile Menu */}
-  {isMenuOpen && (
-    <div className="md:hidden flex flex-col bg-white px-6 py-4 space-y-4">
-      <Link to="about" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>About Us</Link>
-      <Link to="rooms" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Discover Rooms</Link>
-      <Link to="comments" smooth={true} className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Comments</Link>
-      <Link to="/" className="cursor-pointer hover:text-greener" onClick={toggleMenu}>Arabic</Link>
-    </div>
-  )}
-</nav>
+  <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="lg:text-3xl text-2xl font-bold text-greener">Dar Albostan</h1>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-6">
+            <button onClick={() => navigate('/about')} className="cursor-pointer hover:text-greener">About Us</button>
+            <button onClick={() => navigate('/rooms')} className="cursor-pointer hover:text-greener">Discover Rooms</button>
+            <button onClick={() => navigate('/comments')} className="cursor-pointer hover:text-greener">Comments</button>
+            <button onClick={() => navigate('/')} className="cursor-pointer hover:text-greener">Arabic</button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="focus:outline-none">
+              {isMenuOpen ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden flex flex-col bg-white px-6 py-4 space-y-4">
+            <button onClick={() => { navigate('/about'); toggleMenu(); }} className="cursor-pointer hover:text-greener">About Us</button>
+            <button onClick={() => { navigate('/rooms'); toggleMenu(); }} className="cursor-pointer hover:text-greener">Discover Rooms</button>
+            <button onClick={() => { navigate('/comments'); toggleMenu(); }} className="cursor-pointer hover:text-greener">Comments</button>
+            <button onClick={() => { navigate('/'); toggleMenu(); }} className="cursor-pointer hover:text-greener">Arabic</button>
+          </div>
+        )}
+      </nav>
 
 
       {/* Rest of your content */}
@@ -233,7 +235,7 @@ const App = () => {
 </section>
 
 {/* Explore Rooms Section */}
-<section id="rooms"className="py-16 mt-6 px-10 relative bg-greener from-gray-50 via-white to-gray-50">
+<section id="rooms"className="py-16  px-10 relative bg-greener">
       <h2 className="lg:text-4xl text-3xl font-bold text-center text-white mb-10">
       Discover your new favorite rest house
       </h2>

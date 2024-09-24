@@ -7,7 +7,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/english" element={<English />} />
-        <Route path="/arabic" element={<Arabic />} />
+        <Route path="/" element={<Arabic />} />
       </Routes>
     </Router>
   );
